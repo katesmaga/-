@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>JavaScript код</h2></center>
+<pre><code>
+&lt;script&gt;
+    document.querySelectorAll('.menu li').forEach(function (menuItem) {
+        menuItem.addEventListener('mouseenter', function () {
+            const submenu = this.querySelector('.submenu');
+            if (submenu) {
+                submenu.style.display = 'block';
+            }
+        });
+
+        menuItem.addEventListener('mouseleave', function () {
+            const submenu = this.querySelector('.submenu');
+            if (submenu) {
+                submenu.style.display = 'none';
+            }
+        });
+    });
+&lt;/script&gt;
+
+</code></pre>
+</body>
+</html>

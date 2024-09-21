@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>JavaScript код</h2></center>
+<pre><code>
+  &lt;script&gt;
+      document.getElementById('swapButton').addEventListener('click', function () {
+          const index1 = parseInt(document.getElementById('index1').value);
+          const index2 = parseInt(document.getElementById('index2').value);
+
+          if (index1 &gt;= 1 &amp;&amp; index1 &lt;= 4 &amp;&amp; index2 &gt;= 1 &amp;&amp; index2 &lt;= 4 &amp;&amp; index1 !== index2) {
+              const img1 = document.getElementById('img' + index1);
+              const img2 = document.getElementById('img' + index2);
+              const tempSrc = img1.src;
+              img1.src = img2.src;
+              img2.src = tempSrc;
+          } else
+          {
+              alert('Будь ласка, введіть різні номери від 1 до 4.');
+          }
+      });
+  &lt;/script&gt;
+
+</code></pre>
+</body>
+</html>

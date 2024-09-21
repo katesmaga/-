@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дворівневе меню</title>
+        <link rel="stylesheet" href="src/style1.css">
+</head>
+<body>
+<ul class="menu">
+    <li>Пункт 1
+        <ul class="submenu">
+            <li>Підпункт 1.1</li>
+            <li>Підпункт 1.2</li>
+            <li>Підпункт 1.3</li>
+        </ul>
+    </li>
+    <li>Пункт 2
+        <ul class="submenu">
+            <li>Підпункт 2.1</li>
+            <li>Підпункт 2.2</li>
+            <li>Підпункт 2.3</li>
+        </ul>
+    </li>
+    <li>Пункт 3</li>
+</ul>
+<script>
+    document.querySelectorAll('.menu li').forEach(function (menuItem) {
+        menuItem.addEventListener('mouseenter', function () {
+            const submenu = this.querySelector('.submenu');
+            if (submenu) {
+                submenu.style.display = 'block';
+            }
+        });
+
+        menuItem.addEventListener('mouseleave', function () {
+            const submenu = this.querySelector('.submenu');
+            if (submenu) {
+                submenu.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
