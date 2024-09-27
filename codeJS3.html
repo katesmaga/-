@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>JavaScript код</h2></center>
+<pre><code>
+  const rows = 10;
+  const cols = 10;
+  let grid = createGrid(rows, cols);
+  let previousGrid;
+
+  function createGrid(rows, cols) {
+      let arr = new Array(rows);
+      for (let i = 0; i &lt; rows; i++) {
+          arr[i] = new Array(cols).fill(0);
+      }
+      return arr;
+  }
+
+  function initializeGrid() {
+      const $gameGrid = $(&quot;#game-board&quot;);
+      $gameGrid.empty();
+      for (let i = 0; i &lt; rows; i++) {
+          let $row = $(&quot;&lt;tr&gt;&lt;/tr&gt;&quot;);
+          for (let j = 0; j &lt; cols; j++) {
+              let $cell = $(&quot;&lt;td&gt;&lt;/td&gt;&quot;)
+                  .attr(&quot;id&quot;, `${i}-${j}`)
+                  .addClass(&quot;cell dead&quot;)
+                  .on(&quot;click&quot;, () =&gt; toggleCell(i, j));
+              $row.append($cell);
+          }
+          $gameGrid.append($row);
+      }
+  }
+
+  function toggleCell(row, col) {
+      grid[row][col] = grid[row][col] === 0 ? 1 : 0;
+      updateGrid();
+  }
+
+  function updateGrid() {
+      for (let i = 0; i &lt; rows; i++) {
+          for (let j = 0; j &lt; cols; j++) {
+              const $cell = $(`#${i}-${j}`);
+              if (grid[i][j] === 1) {
+                  $cell.addClass(&quot;alive&quot;).removeClass(&quot;dead&quot;);
+              } else {
+                  $cell.addClass(&quot;dead&quot;).removeClass(&quot;alive&quot;);
+              }
+          }
+      }
+  }
+
+  function countNeighbors(row, col) {
+      let count = 0;
+      for (let i = -1; i &lt;= 1; i++) {
+          for (let j = -1; j &lt;= 1; j++) {
+              if (i === 0 &amp;&amp; j === 0) continue;
+              const newRow = row + i;
+              const newCol = col + j;
+              if (newRow &gt;= 0 &amp;&amp; newRow &lt; rows &amp;&amp; newCol &gt;= 0 &amp;&amp; newCol &lt; cols) {
+                  count += grid[newRow][newCol];
+              }
+          }
+      }
+      return count;
+  }
+
+  function nextGeneration() {
+      const nextGrid = createGrid(rows, cols);
+      for (let i = 0; i &lt; rows; i++) {
+          for (let j = 0; j &lt; cols; j++) {
+              const neighbors = countNeighbors(i, j);
+              if (grid[i][j] === 1) {
+                  nextGrid[i][j] = neighbors &lt; 2 || neighbors &gt; 3 ? 0 : 1;
+              } else {
+                  nextGrid[i][j] = neighbors === 3 ? 1 : 0;
+              }
+          }
+      }
+
+      if (gridsAreEqual(grid, nextGrid)) {
+          stopGame();
+          alert(&quot;Гра завершена. Клітинки більше не змінюються!&quot;);
+      }
+
+      grid = nextGrid.map(arr =&gt; [...arr]);
+      updateGrid();
+  }
+
+  function gridsAreEqual(grid1, grid2) {
+      for (let i = 0; i &lt; rows; i++) {
+          for (let j = 0; j &lt; cols; j++) {
+              if (grid1[i][j] !== grid2[i][j]) {
+                  return false;
+              }
+          }
+      }
+      return true;
+  }
+
+  $(document).ready(function() {
+      initializeGrid();
+      updateGrid();
+  });
+
+  let gameInterval;
+  function startGame() {
+      if (!gameInterval) {
+          gameInterval = setInterval(nextGeneration, 500);
+      }
+  }
+
+  function stopGame() {
+      clearInterval(gameInterval);
+      gameInterval = null;
+  }
+
+
+</code></pre>
+</body>
+</html>

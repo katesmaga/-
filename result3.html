@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Гра "Життя"</title>
+    <style>
+    table {
+        border-collapse: collapse;
+        margin: 20px auto;
+    }
+
+    td {
+        width: 30px;
+        height: 30px;
+        border: 0.5px solid #686461;
+        cursor: pointer;
+    }
+
+    .alive {
+        background-color: #C0587E;
+    }
+
+    .dead {
+        background-color: #ded1dc;
+    }
+    </style>
+</head>
+<body>
+    <center><h1>Гра "Життя"</h1>
+    <table id="game-board"></table>
+    <div class="game-controls">
+        <button onclick="startGame()">Почати гру</button>
+        <button onclick="stopGame()">Зупинити гру</button>
+    </div>
+</center>
+    <script src="src/game.js"></script> <!-- Підключення скрипта -->
+</body>
+</html>
