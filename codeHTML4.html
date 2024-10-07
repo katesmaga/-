@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>HTML код</h2></center>
+<pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+      &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+      &lt;title&gt;Форма&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;center&gt;&lt;h2&gt;Форма реєстрації&lt;/h2&gt;&lt;/center&gt;
+      &lt;form id=&quot;registrationForm&quot;&gt;
+          &lt;label for=&quot;firstName&quot;&gt;Ім'я:&lt;/label&gt;
+          &lt;input type=&quot;text&quot; id=&quot;firstName&quot; name=&quot;firstName&quot; placeholder=&quot;Введіть ім'я&quot;&gt;
+
+          &lt;label for=&quot;lastName&quot;&gt;Прізвище:&lt;/label&gt;
+          &lt;input type=&quot;text&quot; id=&quot;lastName&quot; name=&quot;lastName&quot; placeholder=&quot;Введіть прізвище&quot;&gt;
+
+          &lt;label for=&quot;organization&quot;&gt;Найменування організації:&lt;/label&gt;
+          &lt;input type=&quot;text&quot; id=&quot;organization&quot; name=&quot;organization&quot; placeholder=&quot;Введіть організацію&quot;&gt;
+
+          &lt;label for=&quot;creditCard&quot;&gt;Номер кредитної картки:&lt;/label&gt;
+          &lt;input type=&quot;number&quot; id=&quot;creditCard&quot; name=&quot;creditCard&quot; placeholder=&quot;Введіть номер картки&quot;&gt;
+
+          &lt;label for=&quot;phone&quot;&gt;Номер телефону:&lt;/label&gt;
+          &lt;input type=&quot;tel&quot; id=&quot;phone&quot; name=&quot;phone&quot; placeholder=&quot;Введіть номер телефону&quot;&gt;
+
+          &lt;label for=&quot;email&quot;&gt;Адреса електронної пошти:&lt;/label&gt;
+          &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Введіть email&quot;&gt;
+
+          &lt;div class=&quot;error hidden&quot; id=&quot;errorMessage&quot;&gt;&lt;/div&gt;
+
+          &lt;button type=&quot;submit&quot;&gt;Надіслати&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;clear-btn&quot; id=&quot;clearBtn&quot;&gt;Очистити&lt;/button&gt;
+      &lt;/form&gt;
+
+      &lt;center&gt; &lt;h2&gt;Заміна рядка за регулярним виразом&lt;/h2&gt;&lt;/center&gt;
+      &lt;form id=&quot;replaceForm&quot;&gt;
+          &lt;label for=&quot;inputString&quot;&gt;Введіть рядок:&lt;/label&gt;
+          &lt;input type=&quot;text&quot; id=&quot;inputString&quot; name=&quot;inputString&quot; placeholder=&quot;Введіть ваш рядок&quot;&gt;
+          &lt;button type=&quot;submit&quot;&gt;Замінити&lt;/button&gt;
+      &lt;/form&gt;
+      &lt;script src=&quot;src/formValidation.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+
+</code></pre>
+</body>
+</html>

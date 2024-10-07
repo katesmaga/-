@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffd1dc;
+            padding: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .clear-btn {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <center><h2>Форма реєстрації</h2></center>
+    <form id="registrationForm">
+        <label for="firstName">Ім'я:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Введіть ім'я">
+
+        <label for="lastName">Прізвище:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Введіть прізвище">
+
+        <label for="organization">Найменування організації:</label>
+        <input type="text" id="organization" name="organization" placeholder="Введіть організацію">
+
+        <label for="creditCard">Номер кредитної картки:</label>
+        <input type="number" id="creditCard" name="creditCard" placeholder="Введіть номер картки">
+
+        <label for="phone">Номер телефону:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Введіть номер телефону">
+
+        <label for="email">Адреса електронної пошти:</label>
+        <input type="email" id="email" name="email" placeholder="Введіть email">
+
+        <div class="error hidden" id="errorMessage"></div>
+
+        <button type="submit">Надіслати</button>
+        <button type="button" class="clear-btn" id="clearBtn">Очистити</button>
+    </form>
+
+    <center> <h2>Заміна рядка за регулярним виразом</h2></center>
+    <form id="replaceForm">
+        <label for="inputString">Введіть рядок:</label>
+        <input type="text" id="inputString" name="inputString" placeholder="Введіть ваш рядок">
+        <button type="submit">Замінити</button>
+    </form>
+    <script src="src/formValidation.js"></script>
+</body>
+</html>
