@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>JavaScript код</h2></center>
+<pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang=&quot;uk&quot;&gt;
+  &lt;head&gt;
+      &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+      &lt;title&gt;Форма з умовним відображенням&lt;/title&gt;
+      &lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
+      &lt;style&gt;
+          #extraField {
+              display: none; /* Сховати поле за замовчуванням */
+          }
+      &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;h1&gt;Форма з умовним відображенням&lt;/h1&gt;
+      &lt;form&gt;
+          &lt;label for=&quot;passwordInput&quot;&gt;Введіть пароль:&lt;/label&gt;
+          &lt;input type=&quot;text&quot; id=&quot;passwordInput&quot; placeholder=&quot;Введіть пароль...&quot;&gt;
+
+          &lt;label&gt;
+              &lt;input type=&quot;checkbox&quot; id=&quot;toggleExtraField&quot;&gt; Ввести контрольне слово
+          &lt;/label&gt;
+
+          &lt;div id=&quot;extraField&quot;&gt;
+              &lt;label for=&quot;extraInput&quot;&gt;Введіть контрольне слово:&lt;/label&gt;
+              &lt;input type=&quot;text&quot; id=&quot;extraInput&quot; placeholder=&quot;Введіть значення...&quot;&gt;
+          &lt;/div&gt;
+
+          &lt;br&gt;
+          &lt;button type=&quot;submit&quot;&gt;Відправити&lt;/button&gt;
+      &lt;/form&gt;
+
+      &lt;script&gt;
+          $(document).ready(function() {
+              $('#toggleExtraField').change(function() {
+                  if ($(this).is(':checked')) {
+                      $('#extraField').show();
+                  } else {
+                      $('#extraField').hide();
+                  }
+              });
+          });
+      &lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+
+
+</code></pre>
+</body>
+</html>

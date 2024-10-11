@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>HTML код</h2></center>
+<pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+      &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+      &lt;title&gt;Modal on Double Click&lt;/title&gt;
+      &lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h3 class=&quot;element&quot; data-info=&quot;Це заголовок&quot;&gt;Завдання 1&lt;/h3&gt;
+    &lt;p class=&quot;element&quot; data-info=&quot;Це абзац&quot;&gt;Цей елемент є абзацом. Натисніть двічі!&lt;/p&gt;
+    &lt;ul class=&quot;element&quot; data-info=&quot;Це список&quot;&gt;
+        &lt;li&gt;Перший пункт&lt;/li&gt;
+        &lt;li&gt;Другий пункт&lt;/li&gt;
+        &lt;li&gt;Третій пункт&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;element&quot; data-info=&quot;Це блоковий елемент&quot;&gt;Цей елемент є блоком. Натисніть двічі!&lt;/div&gt;
+    &lt;h3 class=&quot;element&quot; data-info=&quot;Це заголовок&quot;&gt;Завдання 2&lt;/h3&gt;
+    &lt;div id=&quot;animated-text&quot;&gt;СТІП&lt;/div&gt;
+    &lt;button class=&quot;btn&quot;&gt;Запустити анімацію&lt;/button&gt;
+
+    &lt;h3&gt;Завдання 3&lt;/h3&gt;
+    &lt;form&gt;
+        &lt;label for=&quot;passwordInput&quot;&gt;Введіть пароль:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;passwordInput&quot; placeholder=&quot;Введіть пароль...&quot;&gt;
+        &lt;label&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;toggleExtraField&quot;&gt; Ввести контрольне слово
+        &lt;/label&gt;
+        &lt;div id=&quot;extraField&quot;&gt;
+            &lt;label for=&quot;extraInput&quot;&gt;Введіть контрольне слово:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;extraInput&quot; placeholder=&quot;Введіть значення...&quot;&gt;
+        &lt;/div&gt;
+        &lt;br&gt;
+        &lt;button class=&quot;btn&quot;&gt;Відправити&lt;/button&gt;
+    &lt;/form&gt;
+
+    &lt;div class=&quot;modal-overlay&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;modal&quot;&gt;
+        &lt;p id=&quot;modal-content&quot;&gt;&lt;/p&gt;
+        &lt;button class=&quot;close-btn&quot;&gt;Закрити&lt;/button&gt;
+    &lt;/div&gt;
+      &lt;script src=&quot;src/jQuery.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+
+
+</code></pre>
+</body>
+</html>

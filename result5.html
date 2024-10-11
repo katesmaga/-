@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal on Double Click</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+    .close-btn {
+      margin-top: 10px;
+      cursor: pointer;
+      padding: 5px 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16pt;
+      background-color: #f7ecf3;
+      padding: 20px;
+    }
+    #animated-text {
+      font-size: 20px;
+      color: blue;
+      position: absolute;
+      left: 0;
+      white-space: nowrap;
+    }
+    .btn {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #deacb8;
+      color: black;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16pt;
+    }
+    .btn:hover {
+      background-color: #bf7c8c;
+    }
+    #extraField {
+      display: none;
+    }
+    </style>
+</head>
+<body>
+  <h3 class="element" data-info="Це заголовок">Завдання 1</h3>
+  <p class="element" data-info="Це абзац">Цей елемент є абзацом. Натисніть двічі!</p>
+  <ul class="element" data-info="Це список">
+      <li>Перший пункт</li>
+      <li>Другий пункт</li>
+      <li>Третій пункт</li>
+  </ul>
+  <div class="element" data-info="Це блоковий елемент">Цей елемент є блоком. Натисніть двічі!</div>
+  <h3 class="element" data-info="Це заголовок">Завдання 2</h3>
+  <div id="animated-text">СТІП</div>
+  <button class="btn">Запустити анімацію</button>
+
+  <h3>Завдання 3</h3>
+  <form>
+      <label for="passwordInput">Введіть пароль:</label>
+      <input type="text" id="passwordInput" placeholder="Введіть пароль...">
+      <label>
+          <input type="checkbox" id="toggleExtraField"> Ввести контрольне слово
+      </label>
+      <div id="extraField">
+          <label for="extraInput">Введіть контрольне слово:</label>
+          <input type="text" id="extraInput" placeholder="Введіть значення...">
+      </div>
+      <br>
+      <button class="btn">Відправити</button>
+  </form>
+
+  <div class="modal-overlay"></div>
+  <div class="modal">
+      <p id="modal-content"></p>
+      <button class="close-btn">Закрити</button>
+  </div>
+    <script src="src/jQuery.js"></script>
+</body>
+</html>
