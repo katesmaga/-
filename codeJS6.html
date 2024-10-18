@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>JavaScript код</h2></center>
+<pre><code>
+  $(document).ready(function() {
+      $(&quot;.btn &quot;).click(function() {
+          let $phrase = $(&quot;#phrase&quot;);
+          $phrase.css(&quot;border-color&quot;, &quot;red&quot;);
+
+          $phrase.animate({
+              top: 0,
+              left: $(window).width() - $phrase.outerWidth()
+          }, 2000, function() {
+              $phrase.text(&quot;&quot;);
+
+              $phrase.animate({
+                  top: $(window).height() - $phrase.outerHeight()
+              }, 2000, function() {
+
+                  $phrase.text(&quot;Від топота копит пил по полю&quot;);
+              });
+          });
+      });
+  });
+</code></pre>
+</body>
+</html>
