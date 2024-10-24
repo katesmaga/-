@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>XML</h2></center>
+<pre><code>
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;RECIPE_BOOK&gt;
+      &lt;DISH type="Салат"&gt;
+          &lt;NAME&gt;Грецький салат&lt;/NAME&gt;
+          &lt;RECIPE&gt;Змішати нарізані огірки, помідори, сир фета, маслини та цибулю. Заправити оливковою олією та спеціями.&lt;/RECIPE&gt;
+          &lt;CALORIES&gt;200&lt;/CALORIES&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Огірки&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;200&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Помідори&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;150&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Сир фета&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;100&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Оливкова олія&lt;/NAME&gt;
+              &lt;UNIT&gt;мл&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;30&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+      &lt;/DISH&gt;
+
+      &lt;DISH type="Суп"&gt;
+          &lt;NAME&gt;Борщ&lt;/NAME&gt;
+          &lt;RECIPE&gt;Зварити бульйон, додати буряк, капусту, картоплю, цибулю та моркву. Додати томатну пасту та спеції.&lt;/RECIPE&gt;
+          &lt;CALORIES&gt;350&lt;/CALORIES&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Буряк&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;300&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Капуста&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;200&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Томатна паста&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;50&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+      &lt;/DISH&gt;
+
+      &lt;DISH type="Десерт"&gt;
+          &lt;NAME&gt;Шоколадний торт&lt;/NAME&gt;
+          &lt;RECIPE&gt;Змішати борошно, какао, яйця, масло і молоко. Спекти в духовці при 180°C протягом 30 хвилин.&lt;/RECIPE&gt;
+          &lt;CALORIES&gt;500&lt;/CALORIES&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Борошно&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;200&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Какао&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;50&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Яйця&lt;/NAME&gt;
+              &lt;UNIT&gt;штука&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;3&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+      &lt;/DISH&gt;
+
+      &lt;DISH type="Гарнір"&gt;
+          &lt;NAME&gt;Картопля фрі&lt;/NAME&gt;
+          &lt;RECIPE&gt;Нарізати картоплю соломкою, обсмажити у фритюрі до золотистої скоринки.&lt;/RECIPE&gt;
+          &lt;CALORIES&gt;450&lt;/CALORIES&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Картопля&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;300&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Олія соняшникова&lt;/NAME&gt;
+              &lt;UNIT&gt;мл&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;50&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+      &lt;/DISH&gt;
+
+      &lt;DISH type="Десерт"&gt;
+          &lt;NAME&gt;Яблучний пиріг&lt;/NAME&gt;
+          &lt;RECIPE&gt;Приготувати тісто, викласти на нього порізані яблука, випікати 40 хвилин при 180°C.&lt;/RECIPE&gt;
+          &lt;CALORIES&gt;320&lt;/CALORIES&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Яблука&lt;/NAME&gt;
+              &lt;UNIT&gt;штука&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;4&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Борошно&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;200&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Цукор&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;100&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+      &lt;/DISH&gt;
+
+      &lt;DISH type="Суп"&gt;
+          &lt;NAME&gt;Курячий суп&lt;/NAME&gt;
+          &lt;RECIPE&gt;Зварити курку, додати нарізані овочі та локшину.&lt;/RECIPE&gt;
+          &lt;CALORIES&gt;280&lt;/CALORIES&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Курка&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;300&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Морква&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;100&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Локшина&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;150&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+      &lt;/DISH&gt;
+
+      &lt;DISH type="Салат"&gt;
+          &lt;NAME&gt;Цезар&lt;/NAME&gt;
+          &lt;RECIPE&gt;Змішати салатні листя, куряче філе, сухарі та сир. Заправити соусом цезар.&lt;/RECIPE&gt;
+          &lt;CALORIES&gt;350&lt;/CALORIES&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Куряче філе&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;200&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Сир пармезан&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;50&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+      &lt;/DISH&gt;
+
+      &lt;DISH type="Салат"&gt;
+          &lt;NAME&gt;Вінегрет&lt;/NAME&gt;
+          &lt;RECIPE&gt;Змішати варені овочі (буряк, картопля, морква), додати мариновані огірки, заправити олією.&lt;/RECIPE&gt;
+          &lt;CALORIES&gt;150&lt;/CALORIES&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Буряк&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;200&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Картопля&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;150&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+      &lt;/DISH&gt;
+
+      &lt;DISH type="Гарнір"&gt;
+          &lt;NAME&gt;Рис із овочами&lt;/NAME&gt;
+          &lt;RECIPE&gt;Зварити рис, обсмажити овочі, змішати.&lt;/RECIPE&gt;
+          &lt;CALORIES&gt;250&lt;/CALORIES&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Рис&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;200&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Овочі&lt;/NAME&gt;
+              &lt;UNIT&gt;грам&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;100&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+      &lt;/DISH&gt;
+
+      &lt;DISH type="Десерт"&gt;
+          &lt;NAME&gt;Панкейки&lt;/NAME&gt;
+          &lt;RECIPE&gt;Змішати молоко, яйця, борошно, спекти на сковорідці.&lt;/RECIPE&gt;
+          &lt;CALORIES&gt;400&lt;/CALORIES&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Молоко&lt;/NAME&gt;
+              &lt;UNIT&gt;мл&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;200&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+          &lt;INGREDIENT&gt;
+              &lt;NAME&gt;Яйця&lt;/NAME&gt;
+              &lt;UNIT&gt;штука&lt;/UNIT&gt;
+              &lt;QUANTITY&gt;2&lt;/QUANTITY&gt;
+          &lt;/INGREDIENT&gt;
+      &lt;/DISH&gt;
+  &lt;/RECIPE_BOOK&gt;
+
+</code></pre>
+</body>
+</html>
