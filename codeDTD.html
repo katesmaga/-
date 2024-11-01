@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>HTML код</h2></center>
+<pre><code>
+  &lt;!ELEMENT RECIPE_BOOK (DISH+)&gt;
+  &lt;!ELEMENT DISH (NAME, RECIPE, CALORIES, INGREDIENT+)&gt;
+  &lt;!ATTLIST DISH
+      type CDATA #REQUIRED&gt;
+  &lt;!ELEMENT NAME (#PCDATA)&gt;
+  &lt;!ELEMENT RECIPE (#PCDATA)&gt;
+  &lt;!ELEMENT CALORIES (#PCDATA)&gt;
+  &lt;!ELEMENT INGREDIENT (ING_NAME, AMOUNT, UNIT)&gt;
+  &lt;!ATTLIST INGREDIENT
+      optional CDATA #IMPLIED&gt;
+  &lt;!ELEMENT ING_NAME (#PCDATA)&gt;
+  &lt;!ELEMENT AMOUNT (#PCDATA)&gt;
+  &lt;!ELEMENT UNIT (#PCDATA)&gt;
+
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="RECIPE_BOOK" type="RecipeBookType"/>
+
+    <xs:complexType name="RecipeBook">
+        <xs:sequence>
+            <xs:element name="DISH" type="Dish" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Dish">
+        <xs:sequence>
+            <xs:element name="NAME" type="xs:string"/>
+            <xs:element name="RECIPE" type="xs:string"/>
+            <xs:element name="CALORIES" type="xs:positiveInteger"/>
+            <xs:element name="INGREDIENT" type="IngredientType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Ingredient">
+        <xs:sequence>
+            <xs:element name="NAME" type="xs:string"/>
+            <xs:element name="UNIT" type="xs:string"/>
+            <xs:element name="QUANTITY" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
