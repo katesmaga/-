@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>XSL код</h2></center>
+<pre><code>
+  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+  &lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+      &lt;xsl:output method=&quot;html&quot; encoding=&quot;UTF-8&quot; indent=&quot;yes&quot;/&gt;
+      &lt;xsl:strip-space elements=&quot;*&quot;/&gt;
+
+      &lt;xsl:key name=&quot;dishes&quot; match=&quot;DISH&quot; use=&quot;NAME&quot;/&gt;
+
+      &lt;xsl:template match=&quot;/RECIPE_BOOK&quot;&gt;
+          &lt;html&gt;
+              &lt;head&gt;
+                  &lt;title&gt;Книга Рецептів&lt;/title&gt;
+                  &lt;style&gt;
+                      body { font-family: Arial, sans-serif; }
+                      h1 { color: #2E8B57; }
+                      .dish { border: 1px solid #ccc; margin: 10px; padding: 10px; }
+                      .dish h2 { margin: 0; }
+                      .dish p { margin: 5px 0; }
+                      .ingredients { list-style-type: none; padding: 0; }
+                  &lt;/style&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                  &lt;h1&gt;Список Рецептів&lt;/h1&gt;
+                  &lt;xsl:apply-templates select=&quot;DISH&quot;&gt;
+                      &lt;xsl:sort select=&quot;NAME&quot; data-type=&quot;text&quot; order=&quot;ascending&quot;/&gt;
+                  &lt;/xsl:apply-templates&gt;
+              &lt;/body&gt;
+          &lt;/html&gt;
+      &lt;/xsl:template&gt;
+
+      &lt;xsl:template match=&quot;DISH&quot;&gt;
+          &lt;div class=&quot;dish&quot;&gt;
+              &lt;h2&gt;&lt;xsl:value-of select=&quot;NAME&quot;/&gt;&lt;/h2&gt;
+              &lt;p&gt;&lt;strong&gt;Тип:&lt;/strong&gt; &lt;xsl:value-of select=&quot;@type&quot;/&gt;&lt;/p&gt;
+              &lt;p&gt;&lt;strong&gt;Рецепт:&lt;/strong&gt; &lt;xsl:value-of select=&quot;RECIPE&quot;/&gt;&lt;/p&gt;
+              &lt;p&gt;&lt;strong&gt;Калорії:&lt;/strong&gt; &lt;xsl:value-of select=&quot;CALORIES&quot;/&gt;&lt;/p&gt;
+              &lt;strong&gt;Інгредієнти:&lt;/strong&gt;
+              &lt;ul class=&quot;ingredients&quot;&gt;
+                  &lt;xsl:for-each select=&quot;INGREDIENT&quot;&gt;
+                      &lt;li&gt;
+                          &lt;xsl:value-of select=&quot;QUANTITY&quot;/&gt; &lt;xsl:value-of select=&quot;UNIT&quot;/&gt; &lt;xsl:value-of select=&quot;NAME&quot;/&gt;
+                      &lt;/li&gt;
+                  &lt;/xsl:for-each&gt;
+              &lt;/ul&gt;
+          &lt;/div&gt;
+      &lt;/xsl:template&gt;
+  &lt;/xsl:stylesheet&gt;
+</code></pre>
+</body>
+</html>
