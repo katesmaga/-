@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="recipe_book.xsl"?>
+
+
+<RECIPE_BOOK>
+    <DISH type="Салат">
+        <NAME>Грецький салат</NAME>
+        <RECIPE>Змішати нарізані огірки, помідори, сир фета, маслини та цибулю. Заправити оливковою олією та спеціями.</RECIPE>
+        <CALORIES>200</CALORIES>
+        <INGREDIENT>
+            <NAME>Огірки</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>200</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Помідори</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>150</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Сир фета</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>100</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Оливкова олія</NAME>
+            <UNIT>мл</UNIT>
+            <QUANTITY>30</QUANTITY>
+        </INGREDIENT>
+    </DISH>
+
+    <DISH type="Суп">
+        <NAME>Борщ</NAME>
+        <RECIPE>Зварити бульйон, додати буряк, капусту, картоплю, цибулю та моркву. Додати томатну пасту та спеції.</RECIPE>
+        <CALORIES>350</CALORIES>
+        <INGREDIENT>
+            <NAME>Буряк</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>300</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Капуста</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>200</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Томатна паста</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>50</QUANTITY>
+        </INGREDIENT>
+    </DISH>
+
+    <DISH type="Десерт">
+        <NAME>Шоколадний торт</NAME>
+        <RECIPE>Змішати борошно, какао, яйця, масло і молоко. Спекти в духовці при 180°C протягом 30 хвилин.</RECIPE>
+        <CALORIES>500</CALORIES>
+        <INGREDIENT>
+            <NAME>Борошно</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>200</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Какао</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>50</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Яйця</NAME>
+            <UNIT>штука</UNIT>
+            <QUANTITY>3</QUANTITY>
+        </INGREDIENT>
+    </DISH>
+
+    <DISH type="Гарнір">
+        <NAME>Картопля фрі</NAME>
+        <RECIPE>Нарізати картоплю соломкою, обсмажити у фритюрі до золотистої скоринки.</RECIPE>
+        <CALORIES>450</CALORIES>
+        <INGREDIENT>
+            <NAME>Картопля</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>300</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Олія соняшникова</NAME>
+            <UNIT>мл</UNIT>
+            <QUANTITY>50</QUANTITY>
+        </INGREDIENT>
+    </DISH>
+
+    <DISH type="Десерт">
+        <NAME>Яблучний пиріг</NAME>
+        <RECIPE>Приготувати тісто, викласти на нього порізані яблука, випікати 40 хвилин при 180°C.</RECIPE>
+        <CALORIES>320</CALORIES>
+        <INGREDIENT>
+            <NAME>Яблука</NAME>
+            <UNIT>штука</UNIT>
+            <QUANTITY>4</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Борошно</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>200</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Цукор</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>100</QUANTITY>
+        </INGREDIENT>
+    </DISH>
+
+    <DISH type="Суп">
+        <NAME>Курячий суп</NAME>
+        <RECIPE>Зварити курку, додати нарізані овочі та локшину.</RECIPE>
+        <CALORIES>280</CALORIES>
+        <INGREDIENT>
+            <NAME>Курка</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>300</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Морква</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>100</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Локшина</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>150</QUANTITY>
+        </INGREDIENT>
+    </DISH>
+
+    <DISH type="Салат">
+        <NAME>Цезар</NAME>
+        <RECIPE>Змішати салатні листя, куряче філе, сухарі та сир. Заправити соусом цезар.</RECIPE>
+        <CALORIES>350</CALORIES>
+        <INGREDIENT>
+            <NAME>Куряче філе</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>200</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Сир пармезан</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>50</QUANTITY>
+        </INGREDIENT>
+    </DISH>
+
+    <DISH type="Салат">
+        <NAME>Вінегрет</NAME>
+        <RECIPE>Змішати варені овочі (буряк, картопля, морква), додати мариновані огірки, заправити олією.</RECIPE>
+        <CALORIES>150</CALORIES>
+        <INGREDIENT>
+            <NAME>Буряк</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>200</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Картопля</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>150</QUANTITY>
+        </INGREDIENT>
+    </DISH>
+
+    <DISH type="Гарнір">
+        <NAME>Рис із овочами</NAME>
+        <RECIPE>Зварити рис, обсмажити овочі, змішати.</RECIPE>
+        <CALORIES>250</CALORIES>
+        <INGREDIENT>
+            <NAME>Рис</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>200</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Овочі</NAME>
+            <UNIT>грам</UNIT>
+            <QUANTITY>100</QUANTITY>
+        </INGREDIENT>
+    </DISH>
+
+    <DISH type="Десерт">
+        <NAME>Панкейки</NAME>
+        <RECIPE>Змішати молоко, яйця, борошно, спекти на сковорідці.</RECIPE>
+        <CALORIES>400</CALORIES>
+        <INGREDIENT>
+            <NAME>Молоко</NAME>
+            <UNIT>мл</UNIT>
+            <QUANTITY>200</QUANTITY>
+        </INGREDIENT>
+        <INGREDIENT>
+            <NAME>Яйця</NAME>
+            <UNIT>штука</UNIT>
+            <QUANTITY>2</QUANTITY>
+        </INGREDIENT>
+    </DISH>
+</RECIPE_BOOK>
