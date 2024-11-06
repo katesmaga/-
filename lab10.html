@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function loadContent(page)
+        {
+            document.getElementById('frame').src = page;
+        }
+    </script>
+    <link rel="stylesheet" href="src/style.css">
+    <title>Лабораторна робота 4</title>
+</head>
+<body>
+  <div class="content">
+        <iframe id="frame"></iframe>
+        <div class="button-group">
+        <a class="btn" onclick="loadContent('task10.html')">Умова завдання</a>
+        <a class="btn" onclick="loadContent('result10.html')">Результати завдання</a>
+        <a class="btn" onclick="loadContent('codeHTML10.html')">HTML</a>
+        <a class="btn" onclick="loadContent('codeJS10.html')">JavaScript</a>
+        <a class="btn" onclick="loadContent('codeXML1.html')">XML</a>
+    </div>
+</body>
+</html>

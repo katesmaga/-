@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<center><h2>JavaScript код</h2></center>
+<pre><code>
+  function numberToWords(num) {
+      const ones = [&quot;&quot;, &quot;один&quot;, &quot;два&quot;, &quot;три&quot;, &quot;чотири&quot;, &quot;п'ять&quot;, &quot;шість&quot;, &quot;сім&quot;, &quot;вісім&quot;, &quot;дев'ять&quot;];
+      const teens = [&quot;десять&quot;, &quot;одинадцять&quot;, &quot;дванадцять&quot;, &quot;тринадцять&quot;, &quot;чотирнадцять&quot;, &quot;п'ятнадцять&quot;, &quot;шістнадцять&quot;, &quot;сімнадцять&quot;, &quot;вісімнадцять&quot;, &quot;дев'ятнадцять&quot;];
+      const tens = [&quot;&quot;, &quot;&quot;, &quot;двадцять&quot;, &quot;тридцять&quot;, &quot;сорок&quot;, &quot;п'ятдесят&quot;, &quot;шістдесят&quot;, &quot;сімдесят&quot;, &quot;вісімдесят&quot;, &quot;дев'яносто&quot;];
+      const hundreds = [&quot;&quot;, &quot;сто&quot;, &quot;двісті&quot;, &quot;триста&quot;, &quot;чотириста&quot;, &quot;п'ятсот&quot;, &quot;шістсот&quot;, &quot;сімсот&quot;, &quot;вісімсот&quot;, &quot;дев'ятсот&quot;];
+
+      if (num === 0) return &quot;нуль&quot;;
+
+      let words = &quot;&quot;;
+
+      if (Math.floor(num / 100) &gt; 0) {
+          words += hundreds[Math.floor(num / 100)] + &quot; &quot;;
+          num %= 100;
+      }
+
+      if (num &gt;= 10 &amp;&amp; num &lt; 20) {
+          words += teens[num - 10] + &quot; &quot;;
+      } else {
+          if (Math.floor(num / 10) &gt; 0) {
+              words += tens[Math.floor(num / 10)] + &quot; &quot;;
+          }
+          if (num % 10 &gt; 0) {
+              words += ones[num % 10] + &quot; &quot;;
+          }
+      }
+
+      return words.trim();
+  }
+
+  function replaceDigitsWithWords(text) {
+      return text.replace(/\b\d+\b/g, match =&gt; numberToWords(parseInt(match)));
+  }
+
+  async function loadXML() {
+      try {
+          const response = await fetch('test.xml');
+          const xmlText = await response.text();
+          const parser = new DOMParser();
+          return parser.parseFromString(xmlText, &quot;text/xml&quot;);
+      } catch (error) {
+          console.error(&quot;Error loading XML file:&quot;, error);
+      }
+  }
+
+  async function generateRecipeTable() {
+      const xmlDoc = await loadXML();
+      if (!xmlDoc) return;
+
+      const dishes = xmlDoc.getElementsByTagName(&quot;DISH&quot;);
+      let tableHtml = &quot;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Назва&lt;/th&gt;&lt;th&gt;Рецепт&lt;/th&gt;&lt;th&gt;Калорії&lt;/th&gt;&lt;th&gt;Інгредієнти&lt;/th&gt;&lt;/tr&gt;&quot;;
+
+      for (let i = 0; i &lt; dishes.length; i++) {
+          const dish = dishes[i];
+          const name = dish.getElementsByTagName(&quot;NAME&quot;)[0].textContent;
+          const recipe = dish.getElementsByTagName(&quot;RECIPE&quot;)[0].textContent;
+          const calories = dish.getElementsByTagName(&quot;CALORIES&quot;)[0].textContent;
+          const ingredients = dish.getElementsByTagName(&quot;INGREDIENT&quot;);
+
+          let ingredientsHtml = &quot;&lt;ul&gt;&quot;;
+          for (let j = 0; j &lt; ingredients.length; j++) {
+              const ingredientName = ingredients[j].getElementsByTagName(&quot;NAME&quot;)[0].textContent;
+              const quantity = ingredients[j].getElementsByTagName(&quot;QUANTITY&quot;)[0].textContent;
+              const unit = ingredients[j].getElementsByTagName(&quot;UNIT&quot;)[0].textContent;
+              ingredientsHtml += `&lt;li&gt;${ingredientName}: ${replaceDigitsWithWords(quantity)} ${unit}&lt;/li&gt;`;
+          }
+          ingredientsHtml += &quot;&lt;/ul&gt;&quot;;
+
+          tableHtml += `&lt;tr&gt;
+              &lt;td&gt;${name}&lt;/td&gt;
+              &lt;td&gt;${replaceDigitsWithWords(recipe)}&lt;/td&gt;
+              &lt;td&gt;${replaceDigitsWithWords(calories)}&lt;/td&gt;
+              &lt;td&gt;${ingredientsHtml}&lt;/td&gt;
+          &lt;/tr&gt;`;
+      }
+
+      tableHtml += &quot;&lt;/table&gt;&quot;;
+      document.getElementById(&quot;recipe-table&quot;).innerHTML = tableHtml;
+  }
+
+  generateRecipeTable();
+
+
+</code></pre>
+</body>
+</html>
